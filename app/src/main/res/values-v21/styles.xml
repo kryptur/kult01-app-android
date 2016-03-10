@@ -3,4 +3,8 @@
     <style name="AppTheme" parent="AppTheme.Base">
         <item name="android:windowTranslucentStatus">true</item>
     </style>
+
+    <style name="AppTheme.Toolbar" parent="AppTheme.Toolbar.Base">
+        <item name="android:elevation">4dp</item>
+    </style>
 </resources>
