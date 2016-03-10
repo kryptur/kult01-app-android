@@ -81,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mTitle = getString(R.string.app_title);
+        toolbar.setTitle(mTitle);
         setSupportActionBar(toolbar);
 
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
@@ -288,7 +290,6 @@ public class MainActivity extends AppCompatActivity {
                                 drawerLayout.closeDrawers();
                             }
                         }
-                        Log.d("NAVI", level + "-" + lvl1 + "-" + lvl2);
                     } catch (JSONException ex) {
 
                     }
