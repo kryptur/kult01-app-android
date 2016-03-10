@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/headerView"
+    android:background="@android:color/white"
+    android:gravity="top"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerImageView"
+        android:src="@drawable/navi_header"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_help_app"
+        android:layout_alignBottom="@id/headerImageView"
+        android:layout_alignRight="@id/headerImageView"
+        android:id="@+id/help_button"/>
+
+
+</RelativeLayout>
