@@ -71,11 +71,9 @@ public class ImageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_image, container, false);
 
         final PhotoView photoView = (PhotoView) view.findViewById(R.id.imageView);
-        photoView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 
         //  ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
         PhotoViewAttacher mAttacher = new PhotoViewAttacher(photoView);
-        mAttacher.setScaleType(PhotoView.ScaleType.CENTER_INSIDE);
 
         ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.loading);
         progressBar.setVisibility(View.VISIBLE);
@@ -83,12 +81,13 @@ public class ImageFragment extends Fragment {
         Picasso
                 .with(view.getContext())
                 .load(url)
+                .fit()
+                .centerInside()
                 .into(photoView, new ImageLoadedCallback(progressBar) {
                     @Override
                     public void onSuccess() {
                         if (this.progressBar != null) {
                             this.progressBar.setVisibility(View.GONE);
-                            photoView.setScaleType(PhotoView.ScaleType.CENTER_INSIDE);
                         }
                     }
                 });
